@@ -16,22 +16,14 @@ jobs:
 
         - name: Configurar Python
           uses: actions/setup-python@v5
-    with:
-      python-version: '3.14.5'
+          with:
+           python-version: '3.14.5'
 
-  - name: Instalar dependências
-    run: |
-      python -m pip install --upgrade pip
-      pip install robotframework
-      pip install robotframework-seleniumlibrary
+        - name: Instalar dependências
+          run: python -m pip install --upgrade pip
+               pip install robotframework
+               pip install robotframework-seleniumlibrary
 
-  - name: Executar testes
-    run: |
-      py -m robot -L TRACE -d Results -i cadastro Novo.robot
-
-  - name: Publicar resultados
-    if: always()
-    uses: actions/upload-artifact@v4
-    with:
-      name: robot-results
-      path: Results/
+        - name: Executar testes
+          run: 
+            py -m robot -L TRACE -d Results -i cadastro Novo.robot
