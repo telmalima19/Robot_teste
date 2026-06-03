@@ -1,4 +1,6 @@
 name: Robot Framework Tests
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
     push:
@@ -27,4 +29,4 @@ jobs:
 
         - name: Executar testes
           run: 
-            py -m robot -L TRACE -d Results -i cadastro Novo.robot
+            py -m robot -L TRACE -d Results -i cadastro Robot_teste/Teste_robot/Novo.robot
