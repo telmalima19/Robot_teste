@@ -1,0 +1,14 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${URL}        https://front.serverest.dev/
+${BROWSER}    chrome
+
+*** Keywords ***
+Abrir navegador
+    Open Browser    ${URL}    ${BROWSER}
+    Maximize Browser Window
+
+Fechar navegador
+    Close Browser
