@@ -29,4 +29,4 @@ jobs:
 
         - name: Executar testes
           run: 
-            py -m robot -L TRACE -d Results -i cadastro Robot_teste/Teste_robot/Novo.robot
+            py -m robot -L TRACE -d Results -i cadastro Teste_robot/Novo.robot
