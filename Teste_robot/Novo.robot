@@ -10,6 +10,7 @@ Test Template   Realizar cadastro como administrador
 *** Test Cases ***          NOME      EMAIL                SENHA
 Cadastro Administrador 01   Telma    telma@email.com         123456
 Cadastro Administrador 02   joses    joses@email.com         123456
+Cadastro Administrador 02   xjoao    xjoao@email.com         123456
 
 *** Keywords ***
 Validar clique em cadastrar
