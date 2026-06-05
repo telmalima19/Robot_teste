@@ -28,7 +28,7 @@ jobs:
 
       - name: Executar testes
         run: |
-          python -m robot -L TRACE -d Results -i cadastro Teste_robot/Novo.robot
+           py -m robot -L TRACE -d Results cadastro_test.robot
 
       - name: Notificar Discord
         if: always()

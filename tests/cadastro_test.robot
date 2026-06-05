@@ -14,14 +14,14 @@ Cadastro Administrador 02   joses    joses@email.com         123456
 Cadastro Administrador 03   xjoao    xjoao@email.com         123456
 
 *** Keywords ***
-Validar clique em xxxxxxx
+Validar clique em cadastrar
     xxxAbrir navegadorxxxxx
     xxxAcessar página inicialxxxx
     xxxClicar em cadastrarxxx
     xxxxxFechar navegadorxxx
 
 Realizar cadastro como administrador
-    [Tags]      cadastro
+    [Tags]  cadastro
     [Arguments]  ${nome}  ${email}  ${senha} 
     Dado que o usuário está na página inicial
     Quando clicar no botão cadastrar
