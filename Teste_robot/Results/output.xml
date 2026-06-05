@@ -1,797 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-03T17:11:13.906826" rpa="false" schemaversion="5">
-<suite id="s1" name="Novo" source="C:\Users\dbservices\Desktop\Robot_teste\Teste_robot\Novo.robot">
-<test id="s1-t1" name="Cadastro Administrador 01" line="11">
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-05T10:30:52.020730" rpa="false" schemaversion="5">
+<suite id="s1" name="Telma" source="C:\Users\dbservices\Desktop\Robot_teste\Teste_robot\telma.robot">
+<test id="s1-t1" name="Cadastro com dados do banco" line="10">
 <kw name="Abrir navegador" owner="base" type="SETUP">
-<msg time="2026-06-03T17:11:14.216448" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-06-05T10:30:52.258782" level="TRACE">Arguments: [  ]</msg>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:14.217149" level="TRACE">Arguments: [ 'https://front.serverest.dev/' | 'chrome' ]</msg>
-<msg time="2026-06-03T17:11:14.217278" level="INFO">Opening browser 'chrome' to base url 'https://front.serverest.dev/'.</msg>
-<msg time="2026-06-03T17:11:14.404278" level="DEBUG">Selenium Manager binary found at: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
-<msg time="2026-06-03T17:11:14.404477" level="DEBUG">Executing process: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
-<msg time="2026-06-03T17:11:15.542058" level="DEBUG">Driver path: C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe</msg>
-<msg time="2026-06-03T17:11:15.542175" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
-<msg time="2026-06-03T17:11:15.552577" level="DEBUG">Started executable: `C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe` in a child process with pid: 8124 using 0 to output -3</msg>
-<msg time="2026-06-03T17:11:16.102280" level="DEBUG">POST http://localhost:60261/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
-<msg time="2026-06-03T17:11:16.102942" level="DEBUG">Starting new HTTP connection (1): localhost:60261</msg>
-<msg time="2026-06-03T17:11:16.885602" level="DEBUG">http://localhost:60261 "POST /session HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:16.885876" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"148.0.7778.179","chrome":{"chromedriverVersion":"148.0.7778.178 (d096af1c9e98c45c3596e59620622b1a049bfecb-refs/branch-heads/7778@{#3196})","userDataDir":"C:\\Users\\DBSERV~1\\AppData\\Local\\Temp\\scoped_dir8124_265417798"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:65483"},"goog:processID":16016,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"226df69ed13e7101845cd9e12a6eb4b5"}} | headers=HTTPHeaderDict({'Content-Length': '908', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:16.886068" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:16.886383" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/timeouts {'script': 5000}</msg>
-<msg time="2026-06-03T17:11:16.888105" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:16.888306" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:16.888460" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:16.888683" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/timeouts {'implicit': 0}</msg>
-<msg time="2026-06-03T17:11:16.889972" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:16.890153" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:16.890282" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:16.890460" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/timeouts {'pageLoad': 300000}</msg>
-<msg time="2026-06-03T17:11:16.892373" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:16.892606" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:16.892814" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:16.893094" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/url {'url': 'https://front.serverest.dev/'}</msg>
-<msg time="2026-06-03T17:11:21.142109" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/url HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:21.142272" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:21.142343" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:21.142388" level="DEBUG">Opened browser with session id 226df69ed13e7101845cd9e12a6eb4b5.</msg>
-<msg time="2026-06-03T17:11:21.142436" level="TRACE">Return: 1</msg>
+<msg time="2026-06-05T10:30:52.259452" level="TRACE">Arguments: [ 'https://front.serverest.dev/' | 'chrome' ]</msg>
+<msg time="2026-06-05T10:30:52.259567" level="INFO">Opening browser 'chrome' to base url 'https://front.serverest.dev/'.</msg>
+<msg time="2026-06-05T10:30:52.397472" level="DEBUG">Selenium Manager binary found at: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2026-06-05T10:30:52.397658" level="DEBUG">Executing process: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
+<msg time="2026-06-05T10:30:52.506827" level="DEBUG">Driver path: C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe</msg>
+<msg time="2026-06-05T10:30:52.506904" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2026-06-05T10:30:52.517140" level="DEBUG">Started executable: `C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe` in a child process with pid: 7280 using 0 to output -3</msg>
+<msg time="2026-06-05T10:30:53.066088" level="DEBUG">POST http://localhost:62364/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2026-06-05T10:30:53.066688" level="DEBUG">Starting new HTTP connection (1): localhost:62364</msg>
+<msg time="2026-06-05T10:30:53.702766" level="DEBUG">http://localhost:62364 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:53.702898" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"148.0.7778.179","chrome":{"chromedriverVersion":"148.0.7778.178 (d096af1c9e98c45c3596e59620622b1a049bfecb-refs/branch-heads/7778@{#3196})","userDataDir":"C:\\Users\\DBSERV~1\\AppData\\Local\\Temp\\scoped_dir7280_797764691"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:62367"},"goog:processID":19980,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"b79688d22a03d8414d1474b48e8a2a87"}} | headers=HTTPHeaderDict({'Content-Length': '908', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:53.702966" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:53.703092" level="DEBUG">POST http://localhost:62364/session/b79688d22a03d8414d1474b48e8a2a87/timeouts {'script': 5000}</msg>
+<msg time="2026-06-05T10:30:53.703874" level="DEBUG">http://localhost:62364 "POST /session/b79688d22a03d8414d1474b48e8a2a87/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:53.703970" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:53.704016" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:53.704087" level="DEBUG">POST http://localhost:62364/session/b79688d22a03d8414d1474b48e8a2a87/timeouts {'implicit': 0}</msg>
+<msg time="2026-06-05T10:30:53.704690" level="DEBUG">http://localhost:62364 "POST /session/b79688d22a03d8414d1474b48e8a2a87/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:53.704768" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:53.704814" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:53.704879" level="DEBUG">POST http://localhost:62364/session/b79688d22a03d8414d1474b48e8a2a87/timeouts {'pageLoad': 300000}</msg>
+<msg time="2026-06-05T10:30:53.705473" level="DEBUG">http://localhost:62364 "POST /session/b79688d22a03d8414d1474b48e8a2a87/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:53.705553" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:53.705596" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:53.705661" level="DEBUG">POST http://localhost:62364/session/b79688d22a03d8414d1474b48e8a2a87/url {'url': 'https://front.serverest.dev/'}</msg>
+<msg time="2026-06-05T10:30:56.331044" level="DEBUG">http://localhost:62364 "POST /session/b79688d22a03d8414d1474b48e8a2a87/url HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:56.331180" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:56.331240" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:56.331276" level="DEBUG">Opened browser with session id b79688d22a03d8414d1474b48e8a2a87.</msg>
+<msg time="2026-06-05T10:30:56.331323" level="TRACE">Return: 1</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-03T17:11:14.216964" elapsed="6.925524"/>
+<status status="PASS" start="2026-06-05T10:30:52.259189" elapsed="4.072183"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:21.142891" level="TRACE">Arguments: [  ]</msg>
-<msg time="2026-06-03T17:11:21.143099" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/window/maximize {}</msg>
-<msg time="2026-06-03T17:11:21.231123" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/window/maximize HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:21.231385" level="DEBUG">Remote response: status=200 | data={"value":{"height":736,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:21.231560" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:21.231697" level="TRACE">Return: None</msg>
+<msg time="2026-06-05T10:30:56.331647" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-06-05T10:30:56.331785" level="DEBUG">POST http://localhost:62364/session/b79688d22a03d8414d1474b48e8a2a87/window/maximize {}</msg>
+<msg time="2026-06-05T10:30:56.406785" level="DEBUG">http://localhost:62364 "POST /session/b79688d22a03d8414d1474b48e8a2a87/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:56.406935" level="DEBUG">Remote response: status=200 | data={"value":{"height":736,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:56.407016" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:56.407087" level="TRACE">Return: None</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-03T17:11:21.142781" elapsed="0.089027"/>
+<status status="PASS" start="2026-06-05T10:30:56.331576" elapsed="0.075566"/>
 </kw>
-<msg time="2026-06-03T17:11:21.232056" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:14.216251" elapsed="7.015913"/>
+<msg time="2026-06-05T10:30:56.407266" level="TRACE">Return: None</msg>
+<status status="PASS" start="2026-06-05T10:30:52.258652" elapsed="4.148658"/>
 </kw>
-<kw name="Realizar cadastro como administrador">
-<msg time="2026-06-03T17:11:21.234132" level="TRACE">Arguments: [ ${nome}='Telma' | ${email}='telma@email.com' | ${senha}='123456' ]</msg>
+<kw name="Conectar Banco" owner="telmaBanco">
+<msg time="2026-06-05T10:30:56.408049" level="TRACE">Arguments: [  ]</msg>
+<kw name="Connect To Database" owner="DatabaseLibrary">
+<msg time="2026-06-05T10:30:56.408524" level="TRACE">Arguments: [ 'mysql.connector' | 'robotdb' | 'root' | 'root' | 'localhost' | 3306 ]</msg>
+<msg time="2026-06-05T10:30:56.408791" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-06-05T10:30:56.408926" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-06-05T10:30:56.409010" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409047" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409075" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409101" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409126" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409152" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409177" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409201" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409228" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409252" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409277" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409302" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409330" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409357" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409383" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409408" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409435" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409460" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.409487" level="DEBUG">Configuration file not loaded</msg>
+<msg time="2026-06-05T10:30:56.488537" level="INFO">Connect to DB using : mysql.connector.connect(database='robotdb', user=***, password=***, host='localhost', port=3306)</msg>
+<msg time="2026-06-05T10:30:56.540795" level="TRACE">Return: None</msg>
+<arg>mysql.connector</arg>
+<arg>robotdb</arg>
+<arg>root</arg>
+<arg>root</arg>
+<arg>localhost</arg>
+<arg>3306</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2026-06-05T10:30:56.408229" elapsed="0.132726"/>
+</kw>
+<msg time="2026-06-05T10:30:56.541156" level="TRACE">Return: None</msg>
+<status status="PASS" start="2026-06-05T10:30:56.407795" elapsed="0.133442"/>
+</kw>
+<kw name="Buscar Usuario Por Nome" owner="telmaBanco">
+<msg time="2026-06-05T10:30:56.542342" level="TRACE">Arguments: [ ${nome}='leo' ]</msg>
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2026-06-05T10:30:56.543289" level="TRACE">Arguments: [ "SELECT nome, email, senha FROM usuarios WHERE nome='leo'" ]</msg>
+<msg time="2026-06-05T10:30:56.543891" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;SELECT nome, email, senha FROM usuarios WHERE nome='leo'&lt;/code&gt;</msg>
+<msg time="2026-06-05T10:30:56.547465" level="INFO">Commit the transaction</msg>
+<msg time="2026-06-05T10:30:56.548417" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 0 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;nome&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;email&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;senha&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-06-05T10:30:56.548693" level="TRACE">Return: []</msg>
+<msg time="2026-06-05T10:30:56.549016" level="INFO">${resultado} = []</msg>
+<var>${resultado}</var>
+<arg>SELECT nome, email, senha FROM usuarios WHERE nome='${nome}'</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2026-06-05T10:30:56.542814" elapsed="0.006295"/>
+</kw>
+<return>
+<value>${resultado}</value>
+<status status="PASS" start="2026-06-05T10:30:56.549356" elapsed="0.000187"/>
+</return>
+<msg time="2026-06-05T10:30:56.549817" level="TRACE">Return: []</msg>
+<msg time="2026-06-05T10:30:56.550092" level="INFO">${usuario} = []</msg>
+<var>${usuario}</var>
+<arg>leo</arg>
+<status status="PASS" start="2026-06-05T10:30:56.541920" elapsed="0.008263"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-05T10:30:56.551152" level="FAIL">List '${usuario}' has no item in index 0.</msg>
+<var>${nome}</var>
+<arg>${usuario}[0][0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="FAIL" start="2026-06-05T10:30:56.550704" elapsed="0.000586">List '${usuario}' has no item in index 0.</status>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${email}</var>
+<arg>${usuario}[0][1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-06-05T10:30:56.551805" elapsed="0.000050"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<var>${senha}</var>
+<arg>${usuario}[0][2]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2026-06-05T10:30:56.552581" elapsed="0.000317"/>
+</kw>
 <kw name="Dado que o usuário está na página inicial" owner="login_page">
-<msg time="2026-06-03T17:11:21.234971" level="TRACE">Arguments: [  ]</msg>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:21.235399" level="TRACE">Arguments: [ 'https://front.serverest.dev/' ]</msg>
-<msg time="2026-06-03T17:11:21.235552" level="INFO">Opening url 'https://front.serverest.dev/'</msg>
-<msg time="2026-06-03T17:11:21.235827" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/url {'url': 'https://front.serverest.dev/'}</msg>
-<msg time="2026-06-03T17:11:22.064003" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/url HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.064282" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.064463" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.064605" level="TRACE">Return: None</msg>
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-03T17:11:21.235201" elapsed="0.829522"/>
-</kw>
-<msg time="2026-06-03T17:11:22.064938" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:21.234660" elapsed="0.830380"/>
+<status status="NOT RUN" start="2026-06-05T10:30:56.553968" elapsed="0.000090"/>
 </kw>
 <kw name="Quando clicar no botão cadastrar" owner="login_page">
-<msg time="2026-06-03T17:11:22.065887" level="TRACE">Arguments: [  ]</msg>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:22.067092" level="TRACE">Arguments: [ 'css=[data-testid="cadastrar"]' | datetime.timedelta(seconds=10) ]</msg>
-<msg time="2026-06-03T17:11:22.067962" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/elements {'using': 'css selector', 'value': '[data-testid="cadastrar"]'}</msg>
-<msg time="2026-06-03T17:11:22.093125" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.093410" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.19"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.093588" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.096305" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.19'}]}</msg>
-<msg time="2026-06-03T17:11:22.114003" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/execute/sync HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.114284" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.114453" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.114624" level="TRACE">Return: None</msg>
-<arg>${BTN_CADASTRAR}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T17:11:22.066159" elapsed="0.048574"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:22.115549" level="TRACE">Arguments: [ 'css=[data-testid="cadastrar"]' ]</msg>
-<msg time="2026-06-03T17:11:22.115708" level="INFO">Clicking element 'css=[data-testid="cadastrar"]'.</msg>
-<msg time="2026-06-03T17:11:22.115985" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/elements {'using': 'css selector', 'value': '[data-testid="cadastrar"]'}</msg>
-<msg time="2026-06-03T17:11:22.130694" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.130970" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.19"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.131147" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.131453" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.19/click {}</msg>
-<msg time="2026-06-03T17:11:22.232727" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.19/click HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.232974" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.233101" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.233204" level="TRACE">Return: None</msg>
-<arg>${BTN_CADASTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:22.115079" elapsed="0.118208"/>
-</kw>
-<msg time="2026-06-03T17:11:22.233441" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:22.065465" elapsed="0.168040"/>
+<status status="NOT RUN" start="2026-06-05T10:30:56.554497" elapsed="0.000042"/>
 </kw>
 <kw name="E marcar cadastro como administrador" owner="login_page">
-<msg time="2026-06-03T17:11:22.234192" level="TRACE">Arguments: [  ]</msg>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:22.234805" level="TRACE">Arguments: [ 'css=[data-testid="checkbox"]' ]</msg>
-<msg time="2026-06-03T17:11:22.234954" level="INFO">Clicking element 'css=[data-testid="checkbox"]'.</msg>
-<msg time="2026-06-03T17:11:22.235208" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/elements {'using': 'css selector', 'value': '[data-testid="checkbox"]'}</msg>
-<msg time="2026-06-03T17:11:22.265023" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.265235" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.21"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.265333" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.265508" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.21/click {}</msg>
-<msg time="2026-06-03T17:11:22.433566" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.21/click HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.433817" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.433952" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.434054" level="TRACE">Return: None</msg>
-<arg>${CHECK_CADASTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:22.234438" elapsed="0.199696"/>
-</kw>
-<msg time="2026-06-03T17:11:22.434285" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:22.233818" elapsed="0.200528"/>
+<status status="NOT RUN" start="2026-06-05T10:30:56.554928" elapsed="0.000055"/>
 </kw>
 <kw name="E preencher o campo nome" owner="login_page">
-<msg time="2026-06-03T17:11:22.435146" level="TRACE">Arguments: [ ${nome}='Telma' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:22.436086" level="TRACE">Arguments: [ 'css=[data-testid="nome"]' | 'Telma' ]</msg>
-<msg time="2026-06-03T17:11:22.436449" level="INFO">Typing text 'Telma' into text field 'css=[data-testid="nome"]'.</msg>
-<msg time="2026-06-03T17:11:22.436800" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/elements {'using': 'css selector', 'value': '[data-testid="nome"]'}</msg>
-<msg time="2026-06-03T17:11:22.449246" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.449499" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.23"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.449636" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.449843" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.23/clear {}</msg>
-<msg time="2026-06-03T17:11:22.500875" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.23/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.501075" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.501182" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.501374" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.23/value {'text': 'Telma', 'value': ['T', 'e', 'l', 'm', 'a']}</msg>
-<msg time="2026-06-03T17:11:22.578877" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.23/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:22.579218" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:22.579337" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:22.579425" level="TRACE">Return: None</msg>
-<arg>${CAMPO_NOME}</arg>
 <arg>${nome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:22.435427" elapsed="0.144065"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:11:22.580445" level="TRACE">Arguments: [ datetime.timedelta(seconds=2) ]</msg>
-<msg time="2026-06-03T17:11:24.581524" level="INFO">Slept 2 seconds.</msg>
-<msg time="2026-06-03T17:11:24.581708" level="TRACE">Return: None</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:11:22.579815" elapsed="2.002009"/>
-</kw>
-<msg time="2026-06-03T17:11:24.582007" level="TRACE">Return: None</msg>
-<arg>${nome}</arg>
-<status status="PASS" start="2026-06-03T17:11:22.434673" elapsed="2.147422"/>
+<status status="NOT RUN" start="2026-06-05T10:30:56.556035" elapsed="0.000117"/>
 </kw>
 <kw name="E preencher o campo email" owner="login_page">
-<msg time="2026-06-03T17:11:24.583026" level="TRACE">Arguments: [ ${email}='telma@email.com' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:24.584056" level="TRACE">Arguments: [ 'css=[data-testid="email"]' | 'telma@email.com' ]</msg>
-<msg time="2026-06-03T17:11:24.584239" level="INFO">Typing text 'telma@email.com' into text field 'css=[data-testid="email"]'.</msg>
-<msg time="2026-06-03T17:11:24.584540" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/elements {'using': 'css selector', 'value': '[data-testid="email"]'}</msg>
-<msg time="2026-06-03T17:11:24.599024" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:24.599453" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.24"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:24.599721" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:24.600061" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.24/clear {}</msg>
-<msg time="2026-06-03T17:11:24.630368" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.24/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:24.630720" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:24.630930" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:24.631300" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.24/value {'text': 'telma@email.com', 'value': ['t', 'e', 'l', 'm', 'a', '@', 'e', 'm', 'a', 'i', 'l', '.', 'c', 'o', 'm']}</msg>
-<msg time="2026-06-03T17:11:24.705950" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.24/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:24.706211" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:24.706343" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:24.706446" level="TRACE">Return: None</msg>
-<arg>${CAMPO_EMAIL}</arg>
 <arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:24.583516" elapsed="0.123038"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:11:24.707622" level="TRACE">Arguments: [ datetime.timedelta(seconds=2) ]</msg>
-<msg time="2026-06-03T17:11:26.708146" level="INFO">Slept 2 seconds.</msg>
-<msg time="2026-06-03T17:11:26.708354" level="TRACE">Return: None</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:11:24.706887" elapsed="2.001598"/>
-</kw>
-<msg time="2026-06-03T17:11:26.708685" level="TRACE">Return: None</msg>
-<arg>${email}</arg>
-<status status="PASS" start="2026-06-03T17:11:24.582520" elapsed="2.126252"/>
+<status status="NOT RUN" start="2026-06-05T10:30:56.556868" elapsed="0.000084"/>
 </kw>
 <kw name="E preencher o campo senha" owner="login_page">
-<msg time="2026-06-03T17:11:26.709690" level="TRACE">Arguments: [ ${senha}='123456' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:26.710573" level="TRACE">Arguments: [ 'css=[data-testid="password"]' | '123456' ]</msg>
-<msg time="2026-06-03T17:11:26.710733" level="INFO">Typing text '123456' into text field 'css=[data-testid="password"]'.</msg>
-<msg time="2026-06-03T17:11:26.711003" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/elements {'using': 'css selector', 'value': '[data-testid="password"]'}</msg>
-<msg time="2026-06-03T17:11:26.726889" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:26.727125" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.25"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:26.727285" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:26.727478" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.25/clear {}</msg>
-<msg time="2026-06-03T17:11:26.801858" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.25/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:26.802107" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:26.802239" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:26.802453" level="DEBUG">POST http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.25/value {'text': '123456', 'value': ['1', '2', '3', '4', '5', '6']}</msg>
-<msg time="2026-06-03T17:11:26.871512" level="DEBUG">http://localhost:60261 "POST /session/226df69ed13e7101845cd9e12a6eb4b5/element/f.A469EDE328E4E72C22302C99168149DF.d.DA7F6AA6DC3129EBCB4F3590AA70F90A.e.25/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:26.871701" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:26.871848" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:26.871906" level="TRACE">Return: None</msg>
-<arg>${CAMPO_SENHA}</arg>
 <arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:26.709983" elapsed="0.161966"/>
+<status status="NOT RUN" start="2026-06-05T10:30:56.558412" elapsed="0.000275"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:11:26.872647" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
-<msg time="2026-06-03T17:11:36.873871" level="INFO">Slept 10 seconds.</msg>
-<msg time="2026-06-03T17:11:36.874110" level="TRACE">Return: None</msg>
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:11:26.872161" elapsed="10.002073"/>
-</kw>
-<msg time="2026-06-03T17:11:36.874443" level="TRACE">Return: None</msg>
-<arg>${senha}</arg>
-<status status="PASS" start="2026-06-03T17:11:26.709202" elapsed="10.165320"/>
-</kw>
-<msg time="2026-06-03T17:11:36.874640" level="TRACE">Return: None</msg>
-<arg>Telma</arg>
-<arg>telma@email.com</arg>
-<arg>123456</arg>
-<tag>cadastro</tag>
-<status status="PASS" start="2026-06-03T17:11:21.233539" elapsed="15.641172"/>
+<kw name="Fechar Banco" owner="telmaBanco">
+<status status="NOT RUN" start="2026-06-05T10:30:56.559814" elapsed="0.000375"/>
 </kw>
 <kw name="Fechar navegador" owner="base" type="TEARDOWN">
-<msg time="2026-06-03T17:11:36.876660" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-06-05T10:30:56.562707" level="TRACE">Arguments: [  ]</msg>
 <kw name="Close Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:36.876985" level="TRACE">Arguments: [  ]</msg>
-<msg time="2026-06-03T17:11:36.877105" level="DEBUG">Closing browser with session id 226df69ed13e7101845cd9e12a6eb4b5.</msg>
-<msg time="2026-06-03T17:11:36.877324" level="DEBUG">DELETE http://localhost:60261/session/226df69ed13e7101845cd9e12a6eb4b5 {}</msg>
-<msg time="2026-06-03T17:11:36.981765" level="DEBUG">http://localhost:60261 "DELETE /session/226df69ed13e7101845cd9e12a6eb4b5 HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:36.981971" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:36.982085" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:39.099492" level="TRACE">Return: None</msg>
+<msg time="2026-06-05T10:30:56.563960" level="TRACE">Arguments: [  ]</msg>
+<msg time="2026-06-05T10:30:56.564270" level="DEBUG">Closing browser with session id b79688d22a03d8414d1474b48e8a2a87.</msg>
+<msg time="2026-06-05T10:30:56.564754" level="DEBUG">DELETE http://localhost:62364/session/b79688d22a03d8414d1474b48e8a2a87 {}</msg>
+<msg time="2026-06-05T10:30:56.632066" level="DEBUG">http://localhost:62364 "DELETE /session/b79688d22a03d8414d1474b48e8a2a87 HTTP/1.1" 200 0</msg>
+<msg time="2026-06-05T10:30:56.632283" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-06-05T10:30:56.632431" level="DEBUG">Finished Request</msg>
+<msg time="2026-06-05T10:30:58.754468" level="TRACE">Return: None</msg>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-03T17:11:36.876886" elapsed="2.222903"/>
+<status status="PASS" start="2026-06-05T10:30:56.563639" elapsed="2.191104"/>
 </kw>
-<msg time="2026-06-03T17:11:39.100034" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:36.876264" elapsed="2.223887"/>
+<msg time="2026-06-05T10:30:58.755023" level="TRACE">Return: None</msg>
+<status status="PASS" start="2026-06-05T10:30:56.561884" elapsed="2.193239"/>
 </kw>
-<tag>cadastro</tag>
-<status status="PASS" start="2026-06-03T17:11:14.215411" elapsed="24.885342"/>
+<status status="FAIL" start="2026-06-05T10:30:52.257942" elapsed="6.498043">List '${usuario}' has no item in index 0.</status>
 </test>
-<test id="s1-t2" name="Cadastro Administrador 02" line="12">
-<kw name="Abrir navegador" owner="base" type="SETUP">
-<msg time="2026-06-03T17:11:39.104717" level="TRACE">Arguments: [  ]</msg>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:39.105288" level="TRACE">Arguments: [ 'https://front.serverest.dev/' | 'chrome' ]</msg>
-<msg time="2026-06-03T17:11:39.105509" level="INFO">Opening browser 'chrome' to base url 'https://front.serverest.dev/'.</msg>
-<msg time="2026-06-03T17:11:39.110188" level="DEBUG">Selenium Manager binary found at: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
-<msg time="2026-06-03T17:11:39.110324" level="DEBUG">Executing process: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
-<msg time="2026-06-03T17:11:39.262598" level="DEBUG">Driver path: C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe</msg>
-<msg time="2026-06-03T17:11:39.262696" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
-<msg time="2026-06-03T17:11:39.271198" level="DEBUG">Started executable: `C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe` in a child process with pid: 5160 using 0 to output -3</msg>
-<msg time="2026-06-03T17:11:39.802272" level="DEBUG">POST http://localhost:64300/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
-<msg time="2026-06-03T17:11:39.802572" level="DEBUG">Starting new HTTP connection (1): localhost:64300</msg>
-<msg time="2026-06-03T17:11:40.502667" level="DEBUG">http://localhost:64300 "POST /session HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:40.502911" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"148.0.7778.179","chrome":{"chromedriverVersion":"148.0.7778.178 (d096af1c9e98c45c3596e59620622b1a049bfecb-refs/branch-heads/7778@{#3196})","userDataDir":"C:\\Users\\DBSERV~1\\AppData\\Local\\Temp\\scoped_dir5160_1456560359"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:64303"},"goog:processID":1064,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"8ead1ea628d66b8b02bd63197194e44b"}} | headers=HTTPHeaderDict({'Content-Length': '908', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:40.503052" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:40.503258" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/timeouts {'script': 5000}</msg>
-<msg time="2026-06-03T17:11:40.504790" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:40.504988" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:40.505150" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:40.505335" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/timeouts {'implicit': 0}</msg>
-<msg time="2026-06-03T17:11:40.506847" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:40.507032" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:40.507141" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:40.507292" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/timeouts {'pageLoad': 300000}</msg>
-<msg time="2026-06-03T17:11:40.508738" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:40.509014" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:40.509225" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:40.509532" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/url {'url': 'https://front.serverest.dev/'}</msg>
-<msg time="2026-06-03T17:11:42.754268" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/url HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:42.754504" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:42.754624" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:42.754697" level="DEBUG">Opened browser with session id 8ead1ea628d66b8b02bd63197194e44b.</msg>
-<msg time="2026-06-03T17:11:42.754771" level="TRACE">Return: 2</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-03T17:11:39.105002" elapsed="3.649852"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:42.755249" level="TRACE">Arguments: [  ]</msg>
-<msg time="2026-06-03T17:11:42.755503" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/window/maximize {}</msg>
-<msg time="2026-06-03T17:11:42.826977" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/window/maximize HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:42.827251" level="DEBUG">Remote response: status=200 | data={"value":{"height":736,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:42.827430" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:42.827577" level="TRACE">Return: None</msg>
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-03T17:11:42.755126" elapsed="0.072551"/>
-</kw>
-<msg time="2026-06-03T17:11:42.827839" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:39.104386" elapsed="3.723537"/>
-</kw>
-<kw name="Realizar cadastro como administrador">
-<msg time="2026-06-03T17:11:42.829491" level="TRACE">Arguments: [ ${nome}='joses' | ${email}='joses@email.com' | ${senha}='123456' ]</msg>
-<kw name="Dado que o usuário está na página inicial" owner="login_page">
-<msg time="2026-06-03T17:11:42.830335" level="TRACE">Arguments: [  ]</msg>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:42.830786" level="TRACE">Arguments: [ 'https://front.serverest.dev/' ]</msg>
-<msg time="2026-06-03T17:11:42.831064" level="INFO">Opening url 'https://front.serverest.dev/'</msg>
-<msg time="2026-06-03T17:11:42.831321" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/url {'url': 'https://front.serverest.dev/'}</msg>
-<msg time="2026-06-03T17:11:43.568930" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/url HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.569212" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.569367" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.569491" level="TRACE">Return: None</msg>
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-03T17:11:42.830581" elapsed="0.738999"/>
-</kw>
-<msg time="2026-06-03T17:11:43.569774" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:42.830025" elapsed="0.739828"/>
-</kw>
-<kw name="Quando clicar no botão cadastrar" owner="login_page">
-<msg time="2026-06-03T17:11:43.570722" level="TRACE">Arguments: [  ]</msg>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:43.571647" level="TRACE">Arguments: [ 'css=[data-testid="cadastrar"]' | datetime.timedelta(seconds=10) ]</msg>
-<msg time="2026-06-03T17:11:43.572205" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/elements {'using': 'css selector', 'value': '[data-testid="cadastrar"]'}</msg>
-<msg time="2026-06-03T17:11:43.589951" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.590203" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.19"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.590338" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.590677" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.19'}]}</msg>
-<msg time="2026-06-03T17:11:43.602715" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/execute/sync HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.602902" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.602995" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.603072" level="TRACE">Return: None</msg>
-<arg>${BTN_CADASTRAR}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T17:11:43.571078" elapsed="0.032048"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:43.603626" level="TRACE">Arguments: [ 'css=[data-testid="cadastrar"]' ]</msg>
-<msg time="2026-06-03T17:11:43.603741" level="INFO">Clicking element 'css=[data-testid="cadastrar"]'.</msg>
-<msg time="2026-06-03T17:11:43.603929" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/elements {'using': 'css selector', 'value': '[data-testid="cadastrar"]'}</msg>
-<msg time="2026-06-03T17:11:43.613073" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.613300" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.19"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.613458" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.613651" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.19/click {}</msg>
-<msg time="2026-06-03T17:11:43.687748" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.19/click HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.688004" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.688167" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.688287" level="TRACE">Return: None</msg>
-<arg>${BTN_CADASTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:43.603324" elapsed="0.085062"/>
-</kw>
-<msg time="2026-06-03T17:11:43.688555" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:43.570313" elapsed="0.118327"/>
-</kw>
-<kw name="E marcar cadastro como administrador" owner="login_page">
-<msg time="2026-06-03T17:11:43.689371" level="TRACE">Arguments: [  ]</msg>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:43.690022" level="TRACE">Arguments: [ 'css=[data-testid="checkbox"]' ]</msg>
-<msg time="2026-06-03T17:11:43.690195" level="INFO">Clicking element 'css=[data-testid="checkbox"]'.</msg>
-<msg time="2026-06-03T17:11:43.690480" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/elements {'using': 'css selector', 'value': '[data-testid="checkbox"]'}</msg>
-<msg time="2026-06-03T17:11:43.704602" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.704854" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.21"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.704989" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.705183" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.21/click {}</msg>
-<msg time="2026-06-03T17:11:43.861101" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.21/click HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.861347" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.861551" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.861672" level="TRACE">Return: None</msg>
-<arg>${CHECK_CADASTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:43.689610" elapsed="0.172143"/>
-</kw>
-<msg time="2026-06-03T17:11:43.861904" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:43.689023" elapsed="0.172943"/>
-</kw>
-<kw name="E preencher o campo nome" owner="login_page">
-<msg time="2026-06-03T17:11:43.862669" level="TRACE">Arguments: [ ${nome}='joses' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:43.863332" level="TRACE">Arguments: [ 'css=[data-testid="nome"]' | 'joses' ]</msg>
-<msg time="2026-06-03T17:11:43.863528" level="INFO">Typing text 'joses' into text field 'css=[data-testid="nome"]'.</msg>
-<msg time="2026-06-03T17:11:43.863772" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/elements {'using': 'css selector', 'value': '[data-testid="nome"]'}</msg>
-<msg time="2026-06-03T17:11:43.875965" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.876221" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.23"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.876362" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.876564" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.23/clear {}</msg>
-<msg time="2026-06-03T17:11:43.910257" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.23/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.910381" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.910445" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.910670" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.23/value {'text': 'joses', 'value': ['j', 'o', 's', 'e', 's']}</msg>
-<msg time="2026-06-03T17:11:43.991934" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.23/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:43.992212" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:43.992382" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:43.992511" level="TRACE">Return: None</msg>
-<arg>${CAMPO_NOME}</arg>
-<arg>${nome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:43.862927" elapsed="0.129685"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:11:43.993556" level="TRACE">Arguments: [ datetime.timedelta(seconds=2) ]</msg>
-<msg time="2026-06-03T17:11:45.994676" level="INFO">Slept 2 seconds.</msg>
-<msg time="2026-06-03T17:11:45.994980" level="TRACE">Return: None</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:11:43.992936" elapsed="2.002204"/>
-</kw>
-<msg time="2026-06-03T17:11:45.995399" level="TRACE">Return: None</msg>
-<arg>${nome}</arg>
-<status status="PASS" start="2026-06-03T17:11:43.862287" elapsed="2.133711"/>
-</kw>
-<kw name="E preencher o campo email" owner="login_page">
-<msg time="2026-06-03T17:11:45.999579" level="TRACE">Arguments: [ ${email}='joses@email.com' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:46.000419" level="TRACE">Arguments: [ 'css=[data-testid="email"]' | 'joses@email.com' ]</msg>
-<msg time="2026-06-03T17:11:46.000579" level="INFO">Typing text 'joses@email.com' into text field 'css=[data-testid="email"]'.</msg>
-<msg time="2026-06-03T17:11:46.000855" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/elements {'using': 'css selector', 'value': '[data-testid="email"]'}</msg>
-<msg time="2026-06-03T17:11:46.042762" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:46.043040" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.24"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:46.043192" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:46.043387" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.24/clear {}</msg>
-<msg time="2026-06-03T17:11:46.100684" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.24/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:46.100929" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:46.101061" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:46.101282" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.24/value {'text': 'joses@email.com', 'value': ['j', 'o', 's', 'e', 's', '@', 'e', 'm', 'a', 'i', 'l', '.', 'c', 'o', 'm']}</msg>
-<msg time="2026-06-03T17:11:46.173876" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.24/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:46.174110" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:46.174285" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:46.174418" level="TRACE">Return: None</msg>
-<arg>${CAMPO_EMAIL}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:45.999956" elapsed="0.174565"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:11:46.175444" level="TRACE">Arguments: [ datetime.timedelta(seconds=2) ]</msg>
-<msg time="2026-06-03T17:11:48.176619" level="INFO">Slept 2 seconds.</msg>
-<msg time="2026-06-03T17:11:48.176909" level="TRACE">Return: None</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:11:46.174860" elapsed="2.002186"/>
-</kw>
-<msg time="2026-06-03T17:11:48.177263" level="TRACE">Return: None</msg>
-<arg>${email}</arg>
-<status status="PASS" start="2026-06-03T17:11:45.996775" elapsed="2.180567"/>
-</kw>
-<kw name="E preencher o campo senha" owner="login_page">
-<msg time="2026-06-03T17:11:48.178291" level="TRACE">Arguments: [ ${senha}='123456' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:48.179140" level="TRACE">Arguments: [ 'css=[data-testid="password"]' | '123456' ]</msg>
-<msg time="2026-06-03T17:11:48.179290" level="INFO">Typing text '123456' into text field 'css=[data-testid="password"]'.</msg>
-<msg time="2026-06-03T17:11:48.179573" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/elements {'using': 'css selector', 'value': '[data-testid="password"]'}</msg>
-<msg time="2026-06-03T17:11:48.215888" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:48.216167" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.25"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:48.216309" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:48.216510" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.25/clear {}</msg>
-<msg time="2026-06-03T17:11:48.245410" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.25/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:48.245676" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:48.245816" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:48.246038" level="DEBUG">POST http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.25/value {'text': '123456', 'value': ['1', '2', '3', '4', '5', '6']}</msg>
-<msg time="2026-06-03T17:11:48.297355" level="DEBUG">http://localhost:64300 "POST /session/8ead1ea628d66b8b02bd63197194e44b/element/f.59B7A805AC758AC1584D108FDD8EEB73.d.D668338A17C35427D15CB601E7CAABCA.e.25/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:48.297645" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:48.297813" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:11:48.297940" level="TRACE">Return: None</msg>
-<arg>${CAMPO_SENHA}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:11:48.178657" elapsed="0.119417"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:11:48.299000" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
-<msg time="2026-06-03T17:11:58.300100" level="INFO">Slept 10 seconds.</msg>
-<msg time="2026-06-03T17:11:58.300470" level="TRACE">Return: None</msg>
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:11:48.298419" elapsed="10.002267"/>
-</kw>
-<msg time="2026-06-03T17:11:58.301027" level="TRACE">Return: None</msg>
-<arg>${senha}</arg>
-<status status="PASS" start="2026-06-03T17:11:48.177795" elapsed="10.123375"/>
-</kw>
-<msg time="2026-06-03T17:11:58.301367" level="TRACE">Return: None</msg>
-<arg>joses</arg>
-<arg>joses@email.com</arg>
-<arg>123456</arg>
-<tag>cadastro</tag>
-<status status="PASS" start="2026-06-03T17:11:42.828767" elapsed="15.472710"/>
-</kw>
-<kw name="Fechar navegador" owner="base" type="TEARDOWN">
-<msg time="2026-06-03T17:11:58.304297" level="TRACE">Arguments: [  ]</msg>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:11:58.304769" level="TRACE">Arguments: [  ]</msg>
-<msg time="2026-06-03T17:11:58.304933" level="DEBUG">Closing browser with session id 8ead1ea628d66b8b02bd63197194e44b.</msg>
-<msg time="2026-06-03T17:11:58.305244" level="DEBUG">DELETE http://localhost:64300/session/8ead1ea628d66b8b02bd63197194e44b {}</msg>
-<msg time="2026-06-03T17:11:58.409861" level="DEBUG">http://localhost:64300 "DELETE /session/8ead1ea628d66b8b02bd63197194e44b HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:11:58.410046" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:11:58.410134" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:00.548699" level="TRACE">Return: None</msg>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-03T17:11:58.304626" elapsed="2.244306"/>
-</kw>
-<msg time="2026-06-03T17:12:00.549209" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:11:58.303643" elapsed="2.245662"/>
-</kw>
-<tag>cadastro</tag>
-<status status="PASS" start="2026-06-03T17:11:39.103224" elapsed="21.446595"/>
-</test>
-<test id="s1-t3" name="Cadastro Administrador 03" line="13">
-<kw name="Abrir navegador" owner="base" type="SETUP">
-<msg time="2026-06-03T17:12:00.552573" level="TRACE">Arguments: [  ]</msg>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:00.553074" level="TRACE">Arguments: [ 'https://front.serverest.dev/' | 'chrome' ]</msg>
-<msg time="2026-06-03T17:12:00.553239" level="INFO">Opening browser 'chrome' to base url 'https://front.serverest.dev/'.</msg>
-<msg time="2026-06-03T17:12:00.556741" level="DEBUG">Selenium Manager binary found at: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
-<msg time="2026-06-03T17:12:00.556895" level="DEBUG">Executing process: C:\Users\dbservices\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --language-binding python --output json</msg>
-<msg time="2026-06-03T17:12:00.691564" level="DEBUG">Driver path: C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe</msg>
-<msg time="2026-06-03T17:12:00.691703" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
-<msg time="2026-06-03T17:12:00.700706" level="DEBUG">Started executable: `C:\Users\dbservices\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe` in a child process with pid: 25492 using 0 to output -3</msg>
-<msg time="2026-06-03T17:12:01.236778" level="DEBUG">POST http://localhost:58779/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
-<msg time="2026-06-03T17:12:01.237547" level="DEBUG">Starting new HTTP connection (1): localhost:58779</msg>
-<msg time="2026-06-03T17:12:01.940743" level="DEBUG">http://localhost:58779 "POST /session HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:01.940917" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"148.0.7778.179","chrome":{"chromedriverVersion":"148.0.7778.178 (d096af1c9e98c45c3596e59620622b1a049bfecb-refs/branch-heads/7778@{#3196})","userDataDir":"C:\\Users\\DBSERV~1\\AppData\\Local\\Temp\\scoped_dir25492_2074082520"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:49725"},"goog:processID":29120,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"85240837c4f90b5f0a7e285dfde11dec"}} | headers=HTTPHeaderDict({'Content-Length': '910', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:01.941039" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:01.941204" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/timeouts {'script': 5000}</msg>
-<msg time="2026-06-03T17:12:01.942472" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:01.942648" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:01.942775" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:01.942943" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/timeouts {'implicit': 0}</msg>
-<msg time="2026-06-03T17:12:01.944265" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:01.944441" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:01.944564" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:01.944732" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/timeouts {'pageLoad': 300000}</msg>
-<msg time="2026-06-03T17:12:01.945876" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:01.945972" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:01.946027" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:01.946108" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/url {'url': 'https://front.serverest.dev/'}</msg>
-<msg time="2026-06-03T17:12:04.084712" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/url HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:04.084928" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:04.085052" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:04.085138" level="DEBUG">Opened browser with session id 85240837c4f90b5f0a7e285dfde11dec.</msg>
-<msg time="2026-06-03T17:12:04.085205" level="TRACE">Return: 3</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-03T17:12:00.552809" elapsed="3.532469"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:04.085726" level="TRACE">Arguments: [  ]</msg>
-<msg time="2026-06-03T17:12:04.085888" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/window/maximize {}</msg>
-<msg time="2026-06-03T17:12:04.174542" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/window/maximize HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:04.174811" level="DEBUG">Remote response: status=200 | data={"value":{"height":736,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:04.174994" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:04.175104" level="TRACE">Return: None</msg>
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-03T17:12:04.085630" elapsed="0.089571"/>
-</kw>
-<msg time="2026-06-03T17:12:04.175377" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:12:00.552263" elapsed="3.623208"/>
-</kw>
-<kw name="Realizar cadastro como administrador">
-<msg time="2026-06-03T17:12:04.177175" level="TRACE">Arguments: [ ${nome}='xjoao' | ${email}='xjoao@email.com' | ${senha}='123456' ]</msg>
-<kw name="Dado que o usuário está na página inicial" owner="login_page">
-<msg time="2026-06-03T17:12:04.178166" level="TRACE">Arguments: [  ]</msg>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:04.178726" level="TRACE">Arguments: [ 'https://front.serverest.dev/' ]</msg>
-<msg time="2026-06-03T17:12:04.178906" level="INFO">Opening url 'https://front.serverest.dev/'</msg>
-<msg time="2026-06-03T17:12:04.179228" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/url {'url': 'https://front.serverest.dev/'}</msg>
-<msg time="2026-06-03T17:12:04.886344" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/url HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:04.886722" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:04.886966" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:04.887196" level="TRACE">Return: None</msg>
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-03T17:12:04.178448" elapsed="0.708876"/>
-</kw>
-<msg time="2026-06-03T17:12:04.887522" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:12:04.177790" elapsed="0.709830"/>
-</kw>
-<kw name="Quando clicar no botão cadastrar" owner="login_page">
-<msg time="2026-06-03T17:12:04.888482" level="TRACE">Arguments: [  ]</msg>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:04.889541" level="TRACE">Arguments: [ 'css=[data-testid="cadastrar"]' | datetime.timedelta(seconds=10) ]</msg>
-<msg time="2026-06-03T17:12:04.890043" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/elements {'using': 'css selector', 'value': '[data-testid="cadastrar"]'}</msg>
-<msg time="2026-06-03T17:12:04.911074" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:04.911327" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.19"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:04.911466" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:04.911913" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.19'}]}</msg>
-<msg time="2026-06-03T17:12:04.923247" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/execute/sync HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:04.923497" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:04.923626" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:04.923734" level="TRACE">Return: None</msg>
-<arg>${BTN_CADASTRAR}</arg>
-<arg>10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-03T17:12:04.888829" elapsed="0.034985"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:04.924591" level="TRACE">Arguments: [ 'css=[data-testid="cadastrar"]' ]</msg>
-<msg time="2026-06-03T17:12:04.924753" level="INFO">Clicking element 'css=[data-testid="cadastrar"]'.</msg>
-<msg time="2026-06-03T17:12:04.924980" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/elements {'using': 'css selector', 'value': '[data-testid="cadastrar"]'}</msg>
-<msg time="2026-06-03T17:12:04.934727" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:04.934979" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.19"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:04.935112" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:04.935300" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.19/click {}</msg>
-<msg time="2026-06-03T17:12:05.018696" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.19/click HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:05.018962" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:05.019137" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:05.019306" level="TRACE">Return: None</msg>
-<arg>${BTN_CADASTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:12:04.924105" elapsed="0.095302"/>
-</kw>
-<msg time="2026-06-03T17:12:05.019585" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:12:04.888068" elapsed="0.131602"/>
-</kw>
-<kw name="E marcar cadastro como administrador" owner="login_page">
-<msg time="2026-06-03T17:12:05.020438" level="TRACE">Arguments: [  ]</msg>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:05.021197" level="TRACE">Arguments: [ 'css=[data-testid="checkbox"]' ]</msg>
-<msg time="2026-06-03T17:12:05.021377" level="INFO">Clicking element 'css=[data-testid="checkbox"]'.</msg>
-<msg time="2026-06-03T17:12:05.021672" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/elements {'using': 'css selector', 'value': '[data-testid="checkbox"]'}</msg>
-<msg time="2026-06-03T17:12:05.056957" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:05.057212" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.21"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:05.057348" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:05.057556" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.21/click {}</msg>
-<msg time="2026-06-03T17:12:05.194111" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.21/click HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:05.194398" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:05.194576" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:05.194732" level="TRACE">Return: None</msg>
-<arg>${CHECK_CADASTRAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:12:05.020685" elapsed="0.174147"/>
-</kw>
-<msg time="2026-06-03T17:12:05.195010" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:12:05.020080" elapsed="0.175150"/>
-</kw>
-<kw name="E preencher o campo nome" owner="login_page">
-<msg time="2026-06-03T17:12:05.196112" level="TRACE">Arguments: [ ${nome}='xjoao' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:05.196973" level="TRACE">Arguments: [ 'css=[data-testid="nome"]' | 'xjoao' ]</msg>
-<msg time="2026-06-03T17:12:05.197186" level="INFO">Typing text 'xjoao' into text field 'css=[data-testid="nome"]'.</msg>
-<msg time="2026-06-03T17:12:05.197466" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/elements {'using': 'css selector', 'value': '[data-testid="nome"]'}</msg>
-<msg time="2026-06-03T17:12:05.214884" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:05.215158" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.23"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:05.215330" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:05.215605" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.23/clear {}</msg>
-<msg time="2026-06-03T17:12:05.260543" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.23/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:05.260826" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:05.260991" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:05.261262" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.23/value {'text': 'xjoao', 'value': ['x', 'j', 'o', 'a', 'o']}</msg>
-<msg time="2026-06-03T17:12:05.351529" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.23/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:05.351783" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:05.351931" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:05.352044" level="TRACE">Return: None</msg>
-<arg>${CAMPO_NOME}</arg>
-<arg>${nome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:12:05.196429" elapsed="0.155697"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:12:05.353097" level="TRACE">Arguments: [ datetime.timedelta(seconds=2) ]</msg>
-<msg time="2026-06-03T17:12:07.353685" level="INFO">Slept 2 seconds.</msg>
-<msg time="2026-06-03T17:12:07.353860" level="TRACE">Return: None</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:12:05.352424" elapsed="2.001534"/>
-</kw>
-<msg time="2026-06-03T17:12:07.354115" level="TRACE">Return: None</msg>
-<arg>${nome}</arg>
-<status status="PASS" start="2026-06-03T17:12:05.195640" elapsed="2.158536"/>
-</kw>
-<kw name="E preencher o campo email" owner="login_page">
-<msg time="2026-06-03T17:12:07.354869" level="TRACE">Arguments: [ ${email}='xjoao@email.com' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:07.355566" level="TRACE">Arguments: [ 'css=[data-testid="email"]' | 'xjoao@email.com' ]</msg>
-<msg time="2026-06-03T17:12:07.355843" level="INFO">Typing text 'xjoao@email.com' into text field 'css=[data-testid="email"]'.</msg>
-<msg time="2026-06-03T17:12:07.356143" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/elements {'using': 'css selector', 'value': '[data-testid="email"]'}</msg>
-<msg time="2026-06-03T17:12:07.369075" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:07.369326" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.24"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:07.369458" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:07.369649" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.24/clear {}</msg>
-<msg time="2026-06-03T17:12:07.395578" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.24/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:07.395825" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:07.395964" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:07.396190" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.24/value {'text': 'xjoao@email.com', 'value': ['x', 'j', 'o', 'a', 'o', '@', 'e', 'm', 'a', 'i', 'l', '.', 'c', 'o', 'm']}</msg>
-<msg time="2026-06-03T17:12:07.481496" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.24/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:07.481788" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:07.481923" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:07.482026" level="TRACE">Return: None</msg>
-<arg>${CAMPO_EMAIL}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:12:07.355117" elapsed="0.126977"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:12:07.482994" level="TRACE">Arguments: [ datetime.timedelta(seconds=2) ]</msg>
-<msg time="2026-06-03T17:12:09.483685" level="INFO">Slept 2 seconds.</msg>
-<msg time="2026-06-03T17:12:09.483929" level="TRACE">Return: None</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:12:07.482379" elapsed="2.001706"/>
-</kw>
-<msg time="2026-06-03T17:12:09.484287" level="TRACE">Return: None</msg>
-<arg>${email}</arg>
-<status status="PASS" start="2026-06-03T17:12:07.354504" elapsed="2.129867"/>
-</kw>
-<kw name="E preencher o campo senha" owner="login_page">
-<msg time="2026-06-03T17:12:09.485210" level="TRACE">Arguments: [ ${senha}='123456' ]</msg>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:09.485991" level="TRACE">Arguments: [ 'css=[data-testid="password"]' | '123456' ]</msg>
-<msg time="2026-06-03T17:12:09.486141" level="INFO">Typing text '123456' into text field 'css=[data-testid="password"]'.</msg>
-<msg time="2026-06-03T17:12:09.486460" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/elements {'using': 'css selector', 'value': '[data-testid="password"]'}</msg>
-<msg time="2026-06-03T17:12:09.501684" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:09.501919" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.25"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:09.502083" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:09.502271" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.25/clear {}</msg>
-<msg time="2026-06-03T17:12:09.528785" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.25/clear HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:09.529034" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:09.529170" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:09.529393" level="DEBUG">POST http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.25/value {'text': '123456', 'value': ['1', '2', '3', '4', '5', '6']}</msg>
-<msg time="2026-06-03T17:12:09.576835" level="DEBUG">http://localhost:58779 "POST /session/85240837c4f90b5f0a7e285dfde11dec/element/f.85F8D736F676050E7DB3AC63086C9B98.d.848FB9ED79FEB137CA9092BB1A7159FB.e.25/value HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:09.577112" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:09.577282" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:09.577411" level="TRACE">Return: None</msg>
-<arg>${CAMPO_SENHA}</arg>
-<arg>${senha}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-03T17:12:09.485544" elapsed="0.091971"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-06-03T17:12:09.578450" level="TRACE">Arguments: [ datetime.timedelta(seconds=10) ]</msg>
-<msg time="2026-06-03T17:12:19.579481" level="INFO">Slept 10 seconds.</msg>
-<msg time="2026-06-03T17:12:19.579720" level="TRACE">Return: None</msg>
-<arg>10s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-06-03T17:12:09.577862" elapsed="10.001980"/>
-</kw>
-<msg time="2026-06-03T17:12:19.580049" level="TRACE">Return: None</msg>
-<arg>${senha}</arg>
-<status status="PASS" start="2026-06-03T17:12:09.484768" elapsed="10.095359"/>
-</kw>
-<msg time="2026-06-03T17:12:19.580243" level="TRACE">Return: None</msg>
-<arg>xjoao</arg>
-<arg>xjoao@email.com</arg>
-<arg>123456</arg>
-<tag>cadastro</tag>
-<status status="PASS" start="2026-06-03T17:12:04.176633" elapsed="15.403678"/>
-</kw>
-<kw name="Fechar navegador" owner="base" type="TEARDOWN">
-<msg time="2026-06-03T17:12:19.581906" level="TRACE">Arguments: [  ]</msg>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<msg time="2026-06-03T17:12:19.582243" level="TRACE">Arguments: [  ]</msg>
-<msg time="2026-06-03T17:12:19.582359" level="DEBUG">Closing browser with session id 85240837c4f90b5f0a7e285dfde11dec.</msg>
-<msg time="2026-06-03T17:12:19.582587" level="DEBUG">DELETE http://localhost:58779/session/85240837c4f90b5f0a7e285dfde11dec {}</msg>
-<msg time="2026-06-03T17:12:19.693835" level="DEBUG">http://localhost:58779 "DELETE /session/85240837c4f90b5f0a7e285dfde11dec HTTP/1.1" 200 0</msg>
-<msg time="2026-06-03T17:12:19.694034" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-06-03T17:12:19.694144" level="DEBUG">Finished Request</msg>
-<msg time="2026-06-03T17:12:21.817883" level="TRACE">Return: None</msg>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-03T17:12:19.582135" elapsed="2.236181"/>
-</kw>
-<msg time="2026-06-03T17:12:21.818675" level="TRACE">Return: None</msg>
-<status status="PASS" start="2026-06-03T17:12:19.581498" elapsed="2.237358"/>
-</kw>
-<tag>cadastro</tag>
-<status status="PASS" start="2026-06-03T17:12:00.551517" elapsed="21.268057"/>
-</test>
-<status status="PASS" start="2026-06-03T17:11:13.908574" elapsed="67.913965"/>
+<status status="FAIL" start="2026-06-05T10:30:52.022285" elapsed="6.735781"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="3" fail="0" skip="0">cadastro</stat>
 </tag>
 <suite>
-<stat name="Novo" id="s1" pass="3" fail="0" skip="0">Novo</stat>
+<stat name="Telma" id="s1" pass="0" fail="1" skip="0">Telma</stat>
 </suite>
 </statistics>
 <errors>

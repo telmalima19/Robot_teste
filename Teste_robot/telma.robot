@@ -1,0 +1,26 @@
+*** Settings ***
+Resource    ../Resources/base.robot
+Resource    ../Resources/login_page.robot
+Resource    ../Resources/telmaBanco.robot
+
+Test Setup       Abrir navegador
+Test Teardown    Fechar navegador
+
+*** Test Cases ***
+Cadastro com dados do banco
+    Conectar Banco
+
+    ${usuario}=    Buscar Usuario Por Nome    leo
+
+    ${nome}=     Set Variable    ${usuario}[0][0]
+    ${email}=    Set Variable    ${usuario}[0][1]
+    ${senha}=    Set Variable    ${usuario}[0][2]
+
+    Dado que o usuário está na página inicial
+    Quando clicar no botão cadastrar
+    E marcar cadastro como administrador
+    E preencher o campo nome     ${nome}
+    E preencher o campo email    ${email}
+    E preencher o campo senha    ${senha}
+
+    Fechar Banco

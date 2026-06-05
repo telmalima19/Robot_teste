@@ -32,7 +32,7 @@ E preencher o campo email
 E preencher o campo senha
     [Arguments]    ${senha}
     Input Text     ${CAMPO_SENHA}       ${senha}
-    Sleep   10s
+    Sleep   2s
 
 
 
