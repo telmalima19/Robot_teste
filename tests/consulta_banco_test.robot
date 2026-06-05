@@ -1,7 +1,7 @@
 *** Settings ***
-Resource    ../Resources/base.robot
-Resource    ../Resources/login_page.robot
-Resource    ../Resources/telmaBanco.robot
+Resource    ../resource/base.resource
+Resource    ../resource/login_page.resource
+Resource    ../resource/banco.resource
 
 Test Setup       Abrir navegador
 Test Teardown    Fechar navegador

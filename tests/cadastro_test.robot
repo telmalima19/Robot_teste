@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../Resources/base.robot
-Resource    ../Resources/login_page.robot
+Resource    ../resource/base.resource
+Resource    ../resource/login_page.resource
 
 
 Test Setup       Abrir navegador

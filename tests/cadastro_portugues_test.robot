@@ -1,7 +1,7 @@
 Language: pt-BR
 *** Configurações ***
-Recurso    ../Resources/base_portugues.robot
-Recurso    ../Resources/login_page_portugues.robot
+Recurso    ../resource/base_portugues.resource
+Recurso    ../resource/login_page_portugues.resource
 
 Inicialização de Teste    Abrir navegador
 Finalização de Teste    Fechar navegador
