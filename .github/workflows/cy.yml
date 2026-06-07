@@ -24,12 +24,14 @@ jobs:
           pip install -r requirements.txt
           pip install robotframework
           pip install robotframework-seleniumlibrary
+          pip install robotframework-requests
+          pip show robotframework-requests
           
 
       - name: Executar testes
         run: |
            py -m robot -L TRACE -d Results tests/cadastro_test.robot
-           py -m robot -L TRACE -d Results Cadastro_api.robot
+           py -m robot -L TRACE -d Results tests/Cadastro_api.robot
 
       - name: Notificar Discord
         if: always()
