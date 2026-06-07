@@ -39,4 +39,9 @@ Cadastro com dados do banco falha
     E preencher o campo email    ${email}
     E preencher o campo senha    ${senha}
 
+Teste Screenshot Simples
+    Open Browser    https://google.com    chrome
+    Sleep    2s
+    Capture Page Screenshot    Results/teste.png
+    Close Browser   
     

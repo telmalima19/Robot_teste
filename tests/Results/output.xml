@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-07T16:38:56.620929" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro api" source="C:\Users\dbservices\Desktop\Robot_teste\tests\Cadastro_api.robot">
+<kw name="Criar Sessao Serverest" owner="api_variaveis" type="SETUP">
+<msg time="2026-06-07T16:38:56.748026" level="TRACE">Arguments: [  ]</msg>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-06-07T16:38:56.748487" level="TRACE">Arguments: [ 'serverest' | 'https://serverest.dev' | verify=True ]</msg>
+<msg time="2026-06-07T16:38:56.748578" level="INFO">Creating Session using : alias=serverest, url=https://serverest.dev, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2026-06-07T16:38:56.748602" level="DEBUG">Creating session: serverest</msg>
+<msg time="2026-06-07T16:38:56.748726" level="TRACE">Return: &lt;requests.sessions.Session object at 0x00000254BC94B0E0&gt;</msg>
+<arg>serverest</arg>
+<arg>${BASE_URL}</arg>
+<arg>verify=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-06-07T16:38:56.748336" elapsed="0.000426"/>
+</kw>
+<msg time="2026-06-07T16:38:56.748822" level="TRACE">Return: None</msg>
+<status status="PASS" start="2026-06-07T16:38:56.747909" elapsed="0.000936"/>
+</kw>
+<test id="s1-t1" name="Cadastro Administrador 01" line="10">
+<kw name="Realizar Cadastro De Administrador">
+<msg time="2026-06-07T16:38:56.749654" level="TRACE">Arguments: [ ${nome}='Telma' | ${email}='telma@email.com' | ${senha}='123456' ]</msg>
+<kw name="Cadastrar Usuario Administrador" owner="api_cadastro">
+<msg time="2026-06-07T16:38:56.749947" level="TRACE">Arguments: [ ${nome}='Telma' | ${email}='telma@email.com' | ${senha}='123456' ]</msg>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-06-07T16:38:56.750231" level="TRACE">Arguments: [ 'nome=${nome}' | 'email=${email}' | 'password=${senha}' | 'administrador=true' ]</msg>
+<msg time="2026-06-07T16:38:56.750479" level="TRACE">Return: {'nome': 'Telma',
+ 'email': 'telma@email.com',
+ 'password': '123456',
+ 'administrador': 'true'}</msg>
+<msg time="2026-06-07T16:38:56.750568" level="INFO">${body} = {'nome': 'Telma', 'email': 'telma@email.com', 'password': '123456', 'administrador': 'true'}</msg>
+<var>${body}</var>
+<arg>nome=${nome}</arg>
+<arg>email=${email}</arg>
+<arg>password=${senha}</arg>
+<arg>administrador=true</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-06-07T16:38:56.750060" elapsed="0.000525"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-06-07T16:38:56.750738" level="TRACE">Arguments: [ 'serverest' | '/usuarios' | json={'nome': 'Telma',
+ 'email': 'telma@email.com',
+ 'password': '123456',
+ 'administrador': 'true'} | expected_status='any' ]</msg>
+<msg time="2026-06-07T16:38:56.752882" level="DEBUG">Starting new HTTPS connection (1): serverest.dev:443</msg>
+<msg time="2026-06-07T16:38:57.523563" level="DEBUG">https://serverest.dev:443 "POST /usuarios HTTP/1.1" 400 53</msg>
+<msg time="2026-06-07T16:38:57.523912" level="INFO">POST Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '92', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "Telma", "email": "telma@email.com", "password": "123456", "administrador": "true"}' 
+ </msg>
+<msg time="2026-06-07T16:38:57.524111" level="INFO">POST Response : url=https://serverest.dev/usuarios 
+ status=400, reason=Bad Request 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': 'b775b26db5849a9b87b00e6c655efab0;o=1', 'date': 'Sun, 07 Jun 2026 19:38:57 GMT', 'server': 'Google Frontend', 'Content-Length': '53'} 
+ body={
+    "message": "Este email já está sendo usado"
+} 
+ </msg>
+<msg time="2026-06-07T16:38:57.524227" level="TRACE">Return: &lt;Response [400]&gt;</msg>
+<msg time="2026-06-07T16:38:57.524431" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>serverest</arg>
+<arg>/usuarios</arg>
+<arg>json=${body}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-06-07T16:38:56.750667" elapsed="0.773808"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-06-07T16:38:57.524618" elapsed="0.000107"/>
+</return>
+<msg time="2026-06-07T16:38:57.524967" level="TRACE">Return: &lt;Response [400]&gt;</msg>
+<msg time="2026-06-07T16:38:57.525099" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>${nome}</arg>
+<arg>${email}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2026-06-07T16:38:56.749811" elapsed="0.775330"/>
+</kw>
+<kw name="Validar Cadastro Com Falha" owner="api_cadastro">
+<msg time="2026-06-07T16:38:57.525807" level="TRACE">Arguments: [ ${response}=&lt;Response [400]&gt; ]</msg>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.527127" level="TRACE">Arguments: [ 400 | '400' ]</msg>
+<msg time="2026-06-07T16:38:57.527282" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-07T16:38:57.527371" level="TRACE">Return: None</msg>
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.526078" elapsed="0.001353"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.528486" level="TRACE">Arguments: [ 'Este email já está sendo usado' | 'Este email já está sendo usado' ]</msg>
+<msg time="2026-06-07T16:38:57.528633" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-07T16:38:57.528719" level="TRACE">Return: None</msg>
+<arg>${response.json()["message"]}</arg>
+<arg>Este email já está sendo usado</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.527631" elapsed="0.001140"/>
+</kw>
+<msg time="2026-06-07T16:38:57.528858" level="TRACE">Return: None</msg>
+<arg>${response}</arg>
+<status status="PASS" start="2026-06-07T16:38:57.525465" elapsed="0.003436"/>
+</kw>
+<msg time="2026-06-07T16:38:57.529029" level="TRACE">Return: None</msg>
+<arg>Telma</arg>
+<arg>telma@email.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2026-06-07T16:38:56.749505" elapsed="0.779566"/>
+</kw>
+<status status="PASS" start="2026-06-07T16:38:56.748896" elapsed="0.780869"/>
+</test>
+<test id="s1-t2" name="Cadastro Administrador 02" line="11">
+<kw name="Realizar Cadastro De Administrador">
+<msg time="2026-06-07T16:38:57.531081" level="TRACE">Arguments: [ ${nome}='Joses' | ${email}='joses@email.com' | ${senha}='123456' ]</msg>
+<kw name="Cadastrar Usuario Administrador" owner="api_cadastro">
+<msg time="2026-06-07T16:38:57.531339" level="TRACE">Arguments: [ ${nome}='Joses' | ${email}='joses@email.com' | ${senha}='123456' ]</msg>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.531562" level="TRACE">Arguments: [ 'nome=${nome}' | 'email=${email}' | 'password=${senha}' | 'administrador=true' ]</msg>
+<msg time="2026-06-07T16:38:57.531712" level="TRACE">Return: {'nome': 'Joses',
+ 'email': 'joses@email.com',
+ 'password': '123456',
+ 'administrador': 'true'}</msg>
+<msg time="2026-06-07T16:38:57.531777" level="INFO">${body} = {'nome': 'Joses', 'email': 'joses@email.com', 'password': '123456', 'administrador': 'true'}</msg>
+<var>${body}</var>
+<arg>nome=${nome}</arg>
+<arg>email=${email}</arg>
+<arg>password=${senha}</arg>
+<arg>administrador=true</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.531439" elapsed="0.000370"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-06-07T16:38:57.531952" level="TRACE">Arguments: [ 'serverest' | '/usuarios' | json={'nome': 'Joses',
+ 'email': 'joses@email.com',
+ 'password': '123456',
+ 'administrador': 'true'} | expected_status='any' ]</msg>
+<msg time="2026-06-07T16:38:57.718320" level="DEBUG">https://serverest.dev:443 "POST /usuarios HTTP/1.1" 400 53</msg>
+<msg time="2026-06-07T16:38:57.718819" level="INFO">POST Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '92', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "Joses", "email": "joses@email.com", "password": "123456", "administrador": "true"}' 
+ </msg>
+<msg time="2026-06-07T16:38:57.718928" level="INFO">POST Response : url=https://serverest.dev/usuarios 
+ status=400, reason=Bad Request 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '7767793c85728f4d87b00e6c655ef18d', 'date': 'Sun, 07 Jun 2026 19:38:57 GMT', 'server': 'Google Frontend', 'Content-Length': '53'} 
+ body={
+    "message": "Este email já está sendo usado"
+} 
+ </msg>
+<msg time="2026-06-07T16:38:57.719127" level="TRACE">Return: &lt;Response [400]&gt;</msg>
+<msg time="2026-06-07T16:38:57.719327" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>serverest</arg>
+<arg>/usuarios</arg>
+<arg>json=${body}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.531884" elapsed="0.187483"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-06-07T16:38:57.719487" elapsed="0.000078"/>
+</return>
+<msg time="2026-06-07T16:38:57.719727" level="TRACE">Return: &lt;Response [400]&gt;</msg>
+<msg time="2026-06-07T16:38:57.719827" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>${nome}</arg>
+<arg>${email}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2026-06-07T16:38:57.531221" elapsed="0.188639"/>
+</kw>
+<kw name="Validar Cadastro Com Falha" owner="api_cadastro">
+<msg time="2026-06-07T16:38:57.720418" level="TRACE">Arguments: [ ${response}=&lt;Response [400]&gt; ]</msg>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.721439" level="TRACE">Arguments: [ 400 | '400' ]</msg>
+<msg time="2026-06-07T16:38:57.721561" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-07T16:38:57.721630" level="TRACE">Return: None</msg>
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.720640" elapsed="0.001037"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.722425" level="TRACE">Arguments: [ 'Este email já está sendo usado' | 'Este email já está sendo usado' ]</msg>
+<msg time="2026-06-07T16:38:57.722469" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-07T16:38:57.722500" level="TRACE">Return: None</msg>
+<arg>${response.json()["message"]}</arg>
+<arg>Este email já está sendo usado</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.721854" elapsed="0.000664"/>
+</kw>
+<msg time="2026-06-07T16:38:57.722551" level="TRACE">Return: None</msg>
+<arg>${response}</arg>
+<status status="PASS" start="2026-06-07T16:38:57.720118" elapsed="0.002450"/>
+</kw>
+<msg time="2026-06-07T16:38:57.722591" level="TRACE">Return: None</msg>
+<arg>Joses</arg>
+<arg>joses@email.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2026-06-07T16:38:57.530957" elapsed="0.191651"/>
+</kw>
+<status status="PASS" start="2026-06-07T16:38:57.530601" elapsed="0.192777"/>
+</test>
+<test id="s1-t3" name="Cadastro Administrador 03" line="12">
+<kw name="Realizar Cadastro De Administrador">
+<msg time="2026-06-07T16:38:57.725072" level="TRACE">Arguments: [ ${nome}='Xjoao' | ${email}='xjoao@email.com' | ${senha}='123456' ]</msg>
+<kw name="Cadastrar Usuario Administrador" owner="api_cadastro">
+<msg time="2026-06-07T16:38:57.725361" level="TRACE">Arguments: [ ${nome}='Xjoao' | ${email}='xjoao@email.com' | ${senha}='123456' ]</msg>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.725624" level="TRACE">Arguments: [ 'nome=${nome}' | 'email=${email}' | 'password=${senha}' | 'administrador=true' ]</msg>
+<msg time="2026-06-07T16:38:57.725783" level="TRACE">Return: {'nome': 'Xjoao',
+ 'email': 'xjoao@email.com',
+ 'password': '123456',
+ 'administrador': 'true'}</msg>
+<msg time="2026-06-07T16:38:57.725863" level="INFO">${body} = {'nome': 'Xjoao', 'email': 'xjoao@email.com', 'password': '123456', 'administrador': 'true'}</msg>
+<var>${body}</var>
+<arg>nome=${nome}</arg>
+<arg>email=${email}</arg>
+<arg>password=${senha}</arg>
+<arg>administrador=true</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.725475" elapsed="0.000404"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-06-07T16:38:57.726039" level="TRACE">Arguments: [ 'serverest' | '/usuarios' | json={'nome': 'Xjoao',
+ 'email': 'xjoao@email.com',
+ 'password': '123456',
+ 'administrador': 'true'} | expected_status='any' ]</msg>
+<msg time="2026-06-07T16:38:57.913571" level="DEBUG">https://serverest.dev:443 "POST /usuarios HTTP/1.1" 400 53</msg>
+<msg time="2026-06-07T16:38:57.913912" level="INFO">POST Request : url=https://serverest.dev/usuarios 
+ path_url=/usuarios 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '92', 'Content-Type': 'application/json'} 
+ body=b'{"nome": "Xjoao", "email": "xjoao@email.com", "password": "123456", "administrador": "true"}' 
+ </msg>
+<msg time="2026-06-07T16:38:57.913988" level="INFO">POST Response : url=https://serverest.dev/usuarios 
+ status=400, reason=Bad Request 
+ headers={'access-control-allow-origin': '*', 'x-dns-prefetch-control': 'off', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'x-download-options': 'noopen', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'content-type': 'application/json; charset=utf-8', 'x-cloud-trace-context': '791acb86263e5bf387b00e6c655efe9e', 'date': 'Sun, 07 Jun 2026 19:38:57 GMT', 'server': 'Google Frontend', 'Content-Length': '53'} 
+ body={
+    "message": "Este email já está sendo usado"
+} 
+ </msg>
+<msg time="2026-06-07T16:38:57.914053" level="TRACE">Return: &lt;Response [400]&gt;</msg>
+<msg time="2026-06-07T16:38:57.914169" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>serverest</arg>
+<arg>/usuarios</arg>
+<arg>json=${body}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.725967" elapsed="0.188228"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-06-07T16:38:57.914275" elapsed="0.000044"/>
+</return>
+<msg time="2026-06-07T16:38:57.914427" level="TRACE">Return: &lt;Response [400]&gt;</msg>
+<msg time="2026-06-07T16:38:57.914496" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<var>${response}</var>
+<arg>${nome}</arg>
+<arg>${email}</arg>
+<arg>${senha}</arg>
+<status status="PASS" start="2026-06-07T16:38:57.725232" elapsed="0.189322"/>
+</kw>
+<kw name="Validar Cadastro Com Falha" owner="api_cadastro">
+<msg time="2026-06-07T16:38:57.914961" level="TRACE">Arguments: [ ${response}=&lt;Response [400]&gt; ]</msg>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.915621" level="TRACE">Arguments: [ 400 | '400' ]</msg>
+<msg time="2026-06-07T16:38:57.915698" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-07T16:38:57.915739" level="TRACE">Return: None</msg>
+<arg>${response.status_code}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.915108" elapsed="0.000658"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2026-06-07T16:38:57.916262" level="TRACE">Arguments: [ 'Este email já está sendo usado' | 'Este email já está sendo usado' ]</msg>
+<msg time="2026-06-07T16:38:57.916319" level="DEBUG">Argument types are:
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-06-07T16:38:57.916354" level="TRACE">Return: None</msg>
+<arg>${response.json()["message"]}</arg>
+<arg>Este email já está sendo usado</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-06-07T16:38:57.915862" elapsed="0.000516"/>
+</kw>
+<msg time="2026-06-07T16:38:57.916422" level="TRACE">Return: None</msg>
+<arg>${response}</arg>
+<status status="PASS" start="2026-06-07T16:38:57.914748" elapsed="0.001696"/>
+</kw>
+<msg time="2026-06-07T16:38:57.916473" level="TRACE">Return: None</msg>
+<arg>Xjoao</arg>
+<arg>xjoao@email.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2026-06-07T16:38:57.724899" elapsed="0.191594"/>
+</kw>
+<status status="PASS" start="2026-06-07T16:38:57.724515" elapsed="0.192281"/>
+</test>
+<status status="PASS" start="2026-06-07T16:38:56.622423" elapsed="1.294961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Cadastro api" id="s1" pass="3" fail="0" skip="0">Cadastro api</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
