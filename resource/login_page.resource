@@ -49,7 +49,6 @@ E preencher o campo email
 E preencher o campo senha
     [Arguments]    ${senha}
     Log    Preenchendo senha
-    Wait Until Page Contains Element ${CAMPO_SENHA} 
     Input Text    ${CAMPO_SENHA}    ${senha}
     Capture Page Screenshot
     Log    Campo Senha preenchido com sucesso

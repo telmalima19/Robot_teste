@@ -42,7 +42,7 @@ Validar Cadastro Com Falha
 
     Should Be Equal As Integers
     ...    ${response.status_code}
-    ...    300
+    ...    400
 
     Should Be Equal As Strings
     ...    ${response.json()["message"]}

@@ -4,4 +4,7 @@ output.xml
 log.html
 report.html
 
-
+tests/Results/
+output.xml
+log.html
+report.html
