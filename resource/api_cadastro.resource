@@ -20,7 +20,8 @@ Cadastrar Usuario Administrador
     ...    expected_status=any
 
     RETURN    ${response}
-
+  ${id_usuario}=    Set Variable    ${response.json()["_id"]}
+    Set Suite Variable    ${ID_USUARIO}    ${id_usuario}
 Validar Cadastro Com Sucesso
     [Arguments]    ${response}
 
@@ -41,8 +42,19 @@ Validar Cadastro Com Falha
 
     Should Be Equal As Integers
     ...    ${response.status_code}
-    ...    400
+    ...    300
 
     Should Be Equal As Strings
     ...    ${response.json()["message"]}
     ...    Este email já está sendo usado
+
+Validar Exclusao Com Sucesso
+    [Arguments]    ${response}
+
+    Should Be Equal As Integers
+    ...    ${response.status_code}
+    ...    200
+
+    Should Be Equal As Strings
+    ...    ${response.json()["message"]}
+    ...    Registro excluído com sucesso
